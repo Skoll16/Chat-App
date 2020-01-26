@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity"
+    android:background="@drawable/chatappback">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:src="@drawable/profile"
+        android:cropToPadding="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/custom_profile_image"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/custom_profile_name"
+        android:text="Display User Name"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_alignParentTop="true"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_toEndOf="@+id/custom_profile_image"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/custom_profile_lastseen"
+        android:text="Last Seen"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/custom_profile_name"
+        android:layout_toEndOf="@+id/custom_profile_image"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/custom_profile_image"
+        android:id="@+id/private_msg"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="6dp"
+        android:layout_above="@+id/chat_linear_layout"
+        ></android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/chat_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/background_light"
+        android:orientation="horizontal"
+        >
+        <EditText
+            android:id="@+id/input_msg12"
+            android:layout_width="300dp"
+            android:hint="Mesaage.."
+            android:layout_marginLeft="7dp"
+            android:textColor="@android:color/black"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:layout_width="55dp"
+            android:layout_height="46dp"
+            android:id="@+id/send_pvt_msg_btn"
+
+            android:src="@drawable/send_message"/>
+
+    </LinearLayout>
+</RelativeLayout>
