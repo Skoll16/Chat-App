@@ -60,20 +60,7 @@ public class ChatActivity extends AppCompatActivity {
         mAuth=FirebaseAuth.getInstance();
         messagesenderID=mAuth.getCurrentUser().getUid();
         RootRef= FirebaseDatabase.getInstance().getReference();
-       /* chatToolbar=(Toolbar)findViewById(R.id.find_friends_toolbar);
-
-        setSupportActionBar(chatToolbar);
-        ActionBar actionBar=getSupportActionBar();
-
-        actionBar.setDisplayShowHomeEnabled(true);
-        //actionBar.setDisplayShowHomeEnabled(true);
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        //getSupportActionBar().setDisplayShowHomeEnabled(true);
-        actionBar.setDisplayShowCustomEnabled(true);
-        LayoutInflater layoutInflater=(LayoutInflater)this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View actionbarView =layoutInflater.inflate(R.layout.custom_chat_bar,null);
-        actionBar.setCustomView(actionbarView);*/
-
+      
         userName=(TextView)findViewById(R.id.custom_profile_name);
         userLastSeen=(TextView)findViewById(R.id.custom_profile_lastseen);
         //userImage=(CircleImageView)findViewById(R.id.custom_profile_image);
