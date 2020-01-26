@@ -37,8 +37,7 @@ public class MessageAdapter  extends RecyclerView.Adapter<MessageAdapter.Message
 
             sendermsgText = (TextView) itemView.findViewById(R.id.sender_msg_txt);
             ReceviermsgText = (TextView) itemView.findViewById(R.id.receiver_msg_txt);
-          //  receiverProfileimg = (CircleImageView) itemView.findViewById(R.id.msg_profile_img);
-
+       
         }
     }
 
@@ -66,7 +65,7 @@ public class MessageAdapter  extends RecyclerView.Adapter<MessageAdapter.Message
             if(dataSnapshot.child("image").exists())
             {
                 String Receiverimage=dataSnapshot.child("image").getValue().toString();
-          //      Picasso.get().load(Receiverimage).placeholder(R.drawable.profile_image).into(messageViewHolder.receiverProfileimg);
+          
             }
 
 
@@ -79,7 +78,7 @@ public class MessageAdapter  extends RecyclerView.Adapter<MessageAdapter.Message
          });
          if(FromMessagetype.equals("text"))
          {messageViewHolder.sendermsgText.setVisibility(View.INVISIBLE);
-           //  messageViewHolder.receiverProfileimg.setVisibility(View.INVISIBLE);
+           
              messageViewHolder.ReceviermsgText.setVisibility(View.INVISIBLE);
              if(fromUserID.equals(senderID))
              {    messageViewHolder.sendermsgText.setVisibility(View.VISIBLE);
@@ -92,7 +91,7 @@ public class MessageAdapter  extends RecyclerView.Adapter<MessageAdapter.Message
 
              {
                  messageViewHolder.ReceviermsgText.setVisibility(View.VISIBLE);
-               //  messageViewHolder.receiverProfileimg.setVisibility(View.VISIBLE);
+              
                  messageViewHolder.ReceviermsgText.setBackgroundResource(R.drawable.receivermsglayout);
                  messageViewHolder.ReceviermsgText.setTextColor(Color.BLACK);
                  messageViewHolder.ReceviermsgText.setText(messages.getMessage());
