@@ -93,22 +93,7 @@ public class SettingsActivity extends AppCompatActivity {
     rootRef.child("Users").child(currentuserID).addValueEventListener(new ValueEventListener() {
         @Override
         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-            /*if((dataSnapshot.exists())&&(dataSnapshot.hasChild("name"))&&(dataSnapshot.hasChild("about"))
-                    &&(dataSnapshot.hasChild("images")))
-            {  String username=dataSnapshot.child("name").getValue().toString();
-                String userabout=dataSnapshot.child("about").getValue().toString();
-                String userimage=dataSnapshot.child("images").getValue().toString();
-                Picasso.get().load(userimage).into(userProfileImage);
-                userName.setText(username);
-                userAbout.setText(userabout);
-
-            }
-            else if((dataSnapshot.exists())&&(dataSnapshot.hasChild("name"))){
-                String username=dataSnapshot.child("name").getValue().toString();
-                String userabout=dataSnapshot.child("about").getValue().toString();
-                userName.setText(username);
-                userAbout.setText(userabout);
-            }*/
+           
             if (dataSnapshot.exists())
             {
                 if (dataSnapshot.child("image").exists()&&dataSnapshot.child("name").exists()&&dataSnapshot.child("about").exists())
